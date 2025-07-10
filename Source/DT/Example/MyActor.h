@@ -1,0 +1,64 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+
+#include "CoreMinimal.h"
+#include "GameFramework/Actor.h"
+#include "MyActor.generated.h"
+
+class USpringArmComponent;
+class UCameraComponent;
+class UMyObject;
+
+UCLASS()
+class AMyDummy : public AActor
+{
+	GENERATED_BODY()
+
+public:
+	UPROPERTY()
+	UMyObject* Obj;
+
+	void TestSpawn();
+};
+
+UCLASS(BlueprintType, Blueprintable)
+class AMyActor : public AActor
+{
+	GENERATED_BODY()
+
+public:
+	AMyActor();
+
+	virtual void BeginPlay() override;
+	virtual void EndPlay(EEndPlayReason::Type Reason) override;
+
+public:
+	UPROPERTY(VisibleAnywhere, Category = "MyActor")
+	USpringArmComponent* SpringArm;
+
+	UPROPERTY(VisibleAnywhere, Category = "MyActor")
+	UCameraComponent* Camera;
+
+
+public:
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	AMyDummy* DummyActor;
+
+	UMyObject* TestMyObj;
+
+public:
+	UFUNCTION(BlueprintCallable, CallInEditor)
+	void RemoveTestObject();
+
+	UFUNCTION(BlueprintCallable, CallInEditor)
+	void NewTestObject();
+
+	UFUNCTION(BlueprintCallable)
+	bool IsValidManagedTestObject();
+
+	UFUNCTION(BlueprintPure)
+	bool IsValidTestObject();
+
+};
+
+
+ 
