@@ -3,13 +3,14 @@
 	"EngineAssociation": "5.6",
 	"Category": "",
 	"Description": "",
-	"Modules" : [
+	"Modules": [
 		{
-			"Name" : "DT",
-			"Type" : "Runtime",
-			"LoadingPhase" : "Default"
+			"Name": "DT",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine"
+			]
 		}
-	],
-	"Plugins" : [
 	]
 }
