@@ -6,6 +6,8 @@
 #include "GameFramework/Actor.h"
 #include "ActorCycleChecker.generated.h"
 
+
+
 UCLASS()
 class DT_API AActorCycleChecker : public AActor
 {
@@ -19,9 +21,9 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaTime) override;
-	virtual void EndPlay(EEndPlayReason::Type EndPlayReason) override;
+	virtual void EndPlay(EEndPlayReason::Type Reason) override;
 
-
+	// ~ Begin Actor & Object Interface
 	virtual void Serialize(FArchive& Ar) override;
 	virtual void PostInitProperties() override;
 	virtual void PostLoad() override;
@@ -31,7 +33,5 @@ protected:
 	virtual void UnregisterAllComponents(bool bForReregister = false) override;
 	virtual void PostUnregisterAllComponents() override;
 	virtual void BeginDestroy() override;
-public:	
-	// Called every frame
-
+	// ~ End Actor & Object Interface
 };

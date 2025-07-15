@@ -14,7 +14,7 @@ class ALRTwinManager : public AActor
 public:
 	static TMap<UWorld*, ALRTwinManager*> WorldTwinManagerMap;
 
-	UFUNCTION(BlueprintCallable, meta = (WorldContext = "WorldContextObject"))
+	UFUNCTION(BlueprintCallable, meta = (WorldContext="WorldContextObject"))
 	static ALRTwinManager* GetWorldTwinManager(UObject* WorldContextObject, bool bCreate = false);
 
 	virtual void BeginPlay() override;
@@ -36,6 +36,6 @@ public:
 
 	UFUNCTION(BlueprintPure)
 	bool HasContainsLRObjectComponent(ULRObjectComponent* Comp) const;
-
+	
 };
 

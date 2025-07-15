@@ -8,7 +8,4 @@ UCLASS()
 class ULRLibrary : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
-	
-
-
 };

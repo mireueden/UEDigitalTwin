@@ -6,7 +6,7 @@
 UENUM(BlueprintType)
 enum class ELRObjectType : uint8
 {
-	None = 0    UMETA(DisplayName = "Undefined"),
+	None = 0    UMETA(DisplayName="Undefined"),
 	Light,
 	Computer,
 	Desk,
@@ -14,9 +14,8 @@ enum class ELRObjectType : uint8
 	Keyboard,
 	Mouse,
 	Monitor,
-	AirClear,
+	AirClear
 };
-
 
 USTRUCT(BlueprintType)
 struct FLRObjectInfo
@@ -24,22 +23,25 @@ struct FLRObjectInfo
 	GENERATED_BODY()
 
 public:
-	UPROPERTY(BlueprintReadWrite, EditAnyWhere, Category = "Info")
-	ELRObjectType ObjectType;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Info")
+	ELRObjectType ObjecType;
 
 	// WidgetComponent 기준으로 추가 Offset
-	UPROPERTY(BlueprintReadWrite,EditAnyWhere,Category="Info")
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Info")
 	FVector WidgetOffset;
 
-	UPROPERTY(BlueprintReadWrite, EditAnyWhere, Category = "Info")
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Info")
 	FText DisplayName;
 
+	// bool; unit8
 
 public:
 	FLRObjectInfo()
-		: ObjectType(ELRObjectType::None)
+		: ObjecType(ELRObjectType::None)
 		, WidgetOffset()
 		, DisplayName()
 	{
 	}
 };
+

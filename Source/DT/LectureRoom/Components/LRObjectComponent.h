@@ -15,7 +15,7 @@ class ULRObjectComponent : public USceneComponent
 
 	/**
 	WidgetComponent를 추가하고, 사용
-	TSubclass 로 표현할 위젯 클래스 설정
+	TSubclass 로 표현할 위젯 클래스 설정 
 	1. 컴포넌트 생성자를 작성
 	*/
 
