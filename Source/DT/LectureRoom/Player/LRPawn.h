@@ -29,13 +29,13 @@ public:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	USpringArmComponent* SpringArmComp;
-	
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	UCameraComponent* CameraComp;
-	
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	USphereComponent* CollisionComp;
-	
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	UStaticMeshComponent* StaticMeshComp;
 
@@ -46,7 +46,7 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
+public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
@@ -58,13 +58,14 @@ public:
 	UPROPERTY()
 	FVector MovementVector;
 
+	// (gen.cpp struct 내부에 ReturnValue를 저장한 값을 반환하여서, ReturnType으로 const& 형을 사용할 수 없음)
 	// C++에서는 구현하지 않는 함수, BP에서만 Override하여서 사용 가능
 	UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
 	FVector BP_GetMovementVector() const;
 
-	// C++에서 기본 구현이 필요한 함수, BP에서도 Override하여서 사용 가능
+	// C++에서 기본 구현이 필요한 함수, BP에서도 Override하여서 사용 가능 
 	UFUNCTION(BlueprintNativeEvent, BlueprintPure)
 	FVector GetMovementVector() const;
-	virtual const FVector& GetMovementVector_Implementation() const;
+	virtual FVector GetMovementVector_Implementation() const;
 
 };

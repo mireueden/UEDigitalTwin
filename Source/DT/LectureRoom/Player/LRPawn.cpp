@@ -69,10 +69,9 @@ void ALRPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	FVector V2 = BP_GetMovementVector();
 }
 
-const FVector& ALRPawn::GetMovementVector_Implementation() const
+FVector ALRPawn::GetMovementVector_Implementation() const
 {
 	// BP Override
-	//return MovementVector;
 	return FVector::ZeroVector;
 }
 
