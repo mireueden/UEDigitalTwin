@@ -76,6 +76,4 @@ ManualIPAddress=
 
 [/Script/EngineSettings.GameMapsSettings]
 GameDefaultMap=/Game/LectureRoom/Map/LectureRoomStartLevel.LectureRoomStartLevel
-GameInstanceClass=/Script/DT.LRGameInstance
-GlobalDefaultGameMode=/Script/DT.LRGameMode
 

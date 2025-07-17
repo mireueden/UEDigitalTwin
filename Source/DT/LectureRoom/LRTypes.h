@@ -7,14 +7,14 @@ UENUM(BlueprintType)
 enum class ELRObjectType : uint8
 {
 	None = 0    UMETA(DisplayName="Undefined"),
-	Light,
+	Lamp,
 	Computer,
 	Desk,
 	Chair,
 	Keyboard,
 	Mouse,
 	Monitor,
-	AirClear
+	AirConditioner
 };
 
 USTRUCT(BlueprintType)
