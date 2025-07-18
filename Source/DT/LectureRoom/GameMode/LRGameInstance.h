@@ -13,8 +13,9 @@ UCLASS()
 class DT_API ULRGameInstance : public UGameInstance
 {
 	GENERATED_BODY()
-	
+
 public:
 	virtual void Init() override;
-	virtual void Shutdown();
+	virtual void Shutdown() override;
+	
 };

@@ -2,7 +2,9 @@
 
 
 #include "LectureRoom/Components/LRInteractComponentBase.h"
+#include "LectureRoom/Interface/LRActorInterface.h"
 #include "LectureRoom/LRTypes.h"
+#include "LectureRoom/LRTwinManager.h"
 
 DEFINE_LOG_CATEGORY(LogLRInteractComponent);
 
@@ -14,6 +16,25 @@ ULRInteractComponentBase::ULRInteractComponentBase()
 	PrimaryComponentTick.bCanEverTick = true;
 
 	// ...
+}
+
+void ULRInteractComponentBase::BeginPlay()
+{
+	Super::BeginPlay();
+
+	if (ALRTwinManager* TwinManager = ALRTwinManager::GetWorldTwinManager(this))
+	{
+		TwinManager->AddInteractComponent(this);
+	}
+}
+void ULRInteractComponentBase::EndPlay(EEndPlayReason::Type Reason)
+{
+	if (ALRTwinManager* TwinManager = ALRTwinManager::GetWorldTwinManager(this))
+	{
+		TwinManager->RemoveInteractComponent(this);
+	}
+
+	Super::EndPlay(Reason);
 }
 
 FString GetObjectTypeString(ELRObjectType Type)
@@ -55,8 +76,13 @@ void ULRInteractComponentBase::TurnOn()
 	}
 
 	UE_LOG(LogLRInteractComponent, Log, TEXT("TurnOn (%s)[%s]"), *GetNameSafe(this), *GetObjectTypeString(Type));
-	ReceiveTurnOn();
-	bWorking = true;
+	// 내부동작은 GetClass()->ImplementsInteface<T>
+	if (GetOwner() && GetOwner()->Implements<ULRActorInterface>())
+	{
+		ILRActorInterface::Execute_TurnOn(GetOwner());
+		ReceiveTurnOn();
+		bWorking = true;
+	}
 }
 
 void ULRInteractComponentBase::TurnOff()
@@ -66,8 +92,40 @@ void ULRInteractComponentBase::TurnOff()
 		UE_LOG(LogLRInteractComponent, Warning, TEXT("Already Stopped...(%s)[%s]"), *GetNameSafe(this), *GetObjectTypeString(Type));
 		return;
 	}
-
 	UE_LOG(LogLRInteractComponent, Log, TEXT("TurnOff (%s)[%s]"), *GetNameSafe(this), *GetObjectTypeString(Type));
-	ReceiveTurnOff();
-	bWorking = false;
+	// Class 정보에서 인터페이스 구현이 되었는지 확인
+	if (GetOwner() && GetOwner()->GetClass()->ImplementsInterface(ULRActorInterface::StaticClass()))
+	{
+		ILRActorInterface::Execute_TurnOff(GetOwner());
+		ReceiveTurnOff();
+		bWorking = false;
+	}
+}
+
+void ULRInteractComponentBase::BeginFocus_Implementation()
+{
+	// 상속받은 Interface 타입으로 캐스팅
+	if (ILRActorInterface* Interface = Cast<ILRActorInterface>(GetOwner()))
+	{
+		//Interface->BeginFocus(); // Interface 함수를 직접 호출하면 asset error 발생
+		ILRActorInterface::Execute_BeginFocus(GetOwner());
+	}
+}
+
+void ULRInteractComponentBase::EndFocus_Implementation()
+{
+	// 블루프린트에서 변수로 InterfaceType을 사용할 때, TScriptInterface<T> 사용
+	if (TScriptInterface<ILRActorInterface> Interface = TScriptInterface<ILRActorInterface>(GetOwner()))
+	{
+		//Interface->BeginFocus(); // Interface 함수를 직접 호출하면 asset error 발생
+		ILRActorInterface::Execute_EndFocus(GetOwner());
+
+		//UObject* InterfaceOwner = Interface.GetObject();
+		//ILRActorInterface* Interface = Interface.GetInterface();
+	}
+}
+
+FString ULRInteractComponentBase::GetComponentInfo_Implementation()
+{
+	return FString::Printf(TEXT("%s"), *GetNameSafe(this));
 }

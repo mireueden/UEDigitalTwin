@@ -8,4 +8,11 @@ UCLASS()
 class ULRLibrary : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
+
+public:
+	UFUNCTION(BlueprintPure)
+	static bool IsWithEditor()
+	{
+		return !!WITH_EDITOR;
+	}
 };

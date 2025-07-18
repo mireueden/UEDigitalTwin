@@ -1,5 +1,5 @@
 #include "DT/LectureRoom/LRTwinManager.h"
-#include "DT/LectureRoom/Components/LRObjectComponent.h"
+#include "DT/LectureRoom/Components/LRInteractComponentBase.h"
 
 TMap<UWorld*, ALRTwinManager*> ALRTwinManager::WorldTwinManagerMap = TMap<UWorld*, ALRTwinManager*>();
 
@@ -59,27 +59,27 @@ void ALRTwinManager::EndPlay(EEndPlayReason::Type Reason)
 	Super::EndPlay(Reason);
 }
 
-void ALRTwinManager::AddLRObjectComponent(ULRObjectComponent* Comp)
+void ALRTwinManager::AddInteractComponent(ULRInteractComponentBase* Comp)
 {
-	if (Comp == nullptr || HasContainsLRObjectComponent(Comp))
+	if (Comp == nullptr || HasInteractComponent(Comp))
 	{
 		return;
 	}
 
-	LRObjectComplist.Add(Comp);
+	InteractComponentList.Add(Comp);
 }
 
-void ALRTwinManager::RemoveLRObjectComponent(ULRObjectComponent* Comp)
+void ALRTwinManager::RemoveInteractComponent(ULRInteractComponentBase* Comp)
 {
-	LRObjectComplist.Remove(Comp);
+	InteractComponentList.Remove(Comp);
 }
 
-bool ALRTwinManager::HasContainsLRObjectComponent(ULRObjectComponent* Comp) const
+bool ALRTwinManager::HasInteractComponent(ULRInteractComponentBase* Comp) const
 {
 	if (Comp == nullptr)
 	{
 		return false;
 	}
 
-	return LRObjectComplist.Contains(Comp);
+	return InteractComponentList.Contains(Comp);
 }

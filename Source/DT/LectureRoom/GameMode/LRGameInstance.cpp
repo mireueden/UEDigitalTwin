@@ -9,12 +9,10 @@ void ULRGameInstance::Init()
 {
 	Super::Init();
 
-	UE_LOG(LogLRGameInstance, Log, TEXT("[LifeCycle] LRGameInstacne::Init"));
+	UE_LOG(LogLRGameInstance, Log, TEXT("[LifeCycle] LRGameInstance::Init"));
 }
-
 void ULRGameInstance::Shutdown()
 {
 	Super::Shutdown();
-
-	UE_LOG(LogLRGameInstance, Log, TEXT("[LifeCycle] LRGameInstacne::Shutdown"));
+	UE_LOG(LogLRGameInstance, Log, TEXT("[LifeCycle] LRGameInstance::Shutdown"));
 }

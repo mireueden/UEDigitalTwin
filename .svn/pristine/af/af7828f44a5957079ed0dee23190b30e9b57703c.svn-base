@@ -75,7 +75,8 @@ ManualIPAddress=
 +CollisionChannelRedirects=(OldName="PawnMovement",NewName="Pawn")
 
 [/Script/EngineSettings.GameMapsSettings]
-GameDefaultMap=/Game/LectureRoom/Map/LectureRoomStartLevel.LectureRoomStartLevel
-GlobalDefaultGameMode=/Script/DT.LRGameMode
+GameDefaultMap=/Game/LectureRoom/Map/LectureRoomLevel.LectureRoomLevel
 GameInstanceClass=/Script/DT.LRGameInstance
+GlobalDefaultGameMode=/Script/DT.LRGameMode
+EditorStartupMap=/Game/LectureRoom/Map/LectureRoomLevel.LectureRoomLevel
 

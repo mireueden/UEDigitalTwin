@@ -15,8 +15,8 @@ UCLASS()
 class DT_API ALRInteractiveActor : public AActor, public ILRActorInterface
 {
 	GENERATED_BODY()
-	
-public:	
+
+public:
 	// Sets default values for this actor's properties
 	ALRInteractiveActor();
 
@@ -25,13 +25,16 @@ public:
 	USceneComponent* SceneComp;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	UStaticMeshComponent* StaticMeshComp;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	UBoxComponent* CollisionComp;
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
+public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
@@ -52,8 +55,6 @@ public:
 	// ~ Begin ILRActorInterface
 	virtual void TurnOn_Implementation() override;
 	virtual void TurnOff_Implementation() override;
-	virtual void BeginFocus_Implementation() override;
-	virtual void EndFocus_Implementation() override;
 	// ~ End ILRActorInterface
 
 };

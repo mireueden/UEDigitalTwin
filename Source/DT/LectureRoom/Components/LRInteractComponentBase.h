@@ -10,7 +10,7 @@ enum class ELRObjectType : uint8;
 
 DECLARE_LOG_CATEGORY_EXTERN(LogLRInteractComponent, Log, All);
 
-UCLASS(abstract, ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+UCLASS(abstract, Blueprintable, ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class DT_API ULRInteractComponentBase : public UActorComponent
 {
 	GENERATED_BODY()
@@ -18,6 +18,9 @@ class DT_API ULRInteractComponentBase : public UActorComponent
 public:	
 	// Sets default values for this component's properties
 	ULRInteractComponentBase();
+
+	virtual void BeginPlay() override;
+	virtual void EndPlay(EEndPlayReason::Type Reason) override;
 
 	// TurnOn / TurnOff 
 public:
@@ -40,11 +43,15 @@ public:
 public:
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
 	void BeginFocus();
-	virtual void BeginFocus_Implementation() {};
+	virtual void BeginFocus_Implementation();
 
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
 	void EndFocus();
-	virtual void EndFocus_Implementation() {};
+	virtual void EndFocus_Implementation();
+
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
+	FString GetComponentInfo();
+	virtual FString GetComponentInfo_Implementation();
 
 public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
