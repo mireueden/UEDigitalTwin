@@ -14,7 +14,17 @@ enum class ELRObjectType : uint8
 	Keyboard,
 	Mouse,
 	Monitor,
-	AirConditioner
+	AirConditioner,
+	AirPurifier,
+	BeamProject
+};
+
+UENUM(BlueprintType)
+enum class ELRAirCareType : uint8
+{
+	Temperature,
+	Humidity,
+	FineDust
 };
 
 USTRUCT(BlueprintType)
