@@ -13,7 +13,6 @@ class USphereComponent;
 class UStaticMeshComponent;
 class UFloatingPawnMovement;
 
-
 UCLASS()
 class DT_API ALRPawn : public APawn
 {
@@ -53,19 +52,8 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-
 public:
-	UPROPERTY()
-	FVector MovementVector;
-
-	// (gen.cpp struct 내부에 ReturnValue를 저장한 값을 반환하여서, ReturnType으로 const& 형을 사용할 수 없음)
-	// C++에서는 구현하지 않는 함수, BP에서만 Override하여서 사용 가능
-	UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
-	FVector BP_GetMovementVector() const;
-
-	// C++에서 기본 구현이 필요한 함수, BP에서도 Override하여서 사용 가능 
-	UFUNCTION(BlueprintNativeEvent, BlueprintPure)
-	FVector GetMovementVector() const;
-	virtual FVector GetMovementVector_Implementation() const;
-
+	UFUNCTION(BlueprintPure, BlueprintNativeEvent)
+	AActor* GetTargetActor();
+	virtual AActor* GetTargetActor_Implementation() { return nullptr; }
 };

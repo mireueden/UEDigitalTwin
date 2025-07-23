@@ -7,10 +7,12 @@
 #include "LRInteractComponentBase.generated.h"
 
 enum class ELRObjectType : uint8;
+class ULRTwinData;
+class ULRTwinDataAsset;
 
 DECLARE_LOG_CATEGORY_EXTERN(LogLRInteractComponent, Log, All);
 
-UCLASS(abstract, Blueprintable, ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+UCLASS(Blueprintable, ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class DT_API ULRInteractComponentBase : public UActorComponent
 {
 	GENERATED_BODY()
@@ -54,9 +56,15 @@ public:
 	virtual FString GetComponentInfo_Implementation();
 
 public:
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
-	ELRObjectType Type;
+	UFUNCTION(BlueprintPure)
+	ELRObjectType GetObjectType() const;
 
 	UPROPERTY(VisibleInstanceOnly)
 	bool bWorking;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	ULRTwinDataAsset* TwinDataAsset;
+
+	UPROPERTY(VisibleInstanceOnly, BlueprintReadWrite)
+	ULRTwinData* TwinData;
 };

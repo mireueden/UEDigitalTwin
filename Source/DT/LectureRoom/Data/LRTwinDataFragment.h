@@ -11,7 +11,7 @@ enum class ELRAirCareType : uint8;
 /**
  * fragment 클래스로 사용하려고 합니다.
  */
-UCLASS(abstract, BlueprintType)
+UCLASS(abstract, BlueprintType, EditInlineNew, DefaultToInstanced)
 class DT_API ULRTwinDataFragment : public UObject
 {
 	GENERATED_BODY()
@@ -25,7 +25,7 @@ public:
 /**
 * 사용시간, 전력소모에 대한 상태를 담당하는 데이터
 */
-UCLASS(DefaultToInstanced)
+UCLASS()
 class DT_API ULRTwinPowerConsumptionDataFragment : public ULRTwinDataFragment
 {
 	GENERATED_BODY()
@@ -46,7 +46,7 @@ public:
 	float PowerConsumption;
 };
 
-UCLASS(DefaultToInstanced)
+UCLASS()
 class DT_API ULRAirCareDataFragment : public ULRTwinDataFragment
 {
 	GENERATED_BODY()

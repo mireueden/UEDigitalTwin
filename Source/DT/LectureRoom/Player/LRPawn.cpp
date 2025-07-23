@@ -63,15 +63,4 @@ void ALRPawn::Tick(float DeltaTime)
 void ALRPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
-	// 임시코드입니다
-	FVector V1 = GetMovementVector();
-	FVector V2 = BP_GetMovementVector();
 }
-
-FVector ALRPawn::GetMovementVector_Implementation() const
-{
-	// BP Override
-	return FVector::ZeroVector;
-}
-

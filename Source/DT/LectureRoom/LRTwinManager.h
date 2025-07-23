@@ -5,6 +5,15 @@
 #include "LRTwinManager.generated.h"
 
 class ULRInteractComponentBase;
+class ALRInteractiveActor;
+class APawn;
+
+// AddTwinComponent, RemoveComponent
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnInteractComponentAdded, ULRInteractComponentBase*, Component);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnInteractComponentRemoved, ULRInteractComponentBase*, Component);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnInteractComponentListChanged);
+
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FOnTargetActorChanged, APawn*, Pawn, ALRInteractiveActor*, OldActor, ALRInteractiveActor*, NewActor);
 
 UCLASS(BlueprintType, Blueprintable)
 class ALRTwinManager : public AActor
@@ -36,6 +45,28 @@ public:
 
 	UFUNCTION(BlueprintPure)
 	bool HasInteractComponent(ULRInteractComponentBase* Comp) const;
+
+	UPROPERTY(BlueprintAssignable)
+	FOnInteractComponentAdded OnInteractComponentAdded;
+
+	UPROPERTY(BlueprintAssignable)
+	FOnInteractComponentRemoved OnInteractComponentRemoved;
+
+	UPROPERTY(BlueprintAssignable)
+	FOnInteractComponentListChanged OnInteractComponentListChanged;
+
+public:
+	 UFUNCTION(BlueprintPure)
+	 ALRInteractiveActor* GetCurrentTargetActor();
+
+	UFUNCTION()
+	void NotifyChangeTargetActor(APawn* Pawn, ALRInteractiveActor* OldTargetActor, ALRInteractiveActor* NewTargetActor);
+
+	UFUNCTION(BlueprintCallable, meta = (WorldContext = "Pawn", DisplayName = "NotifyChangeTargetActor"))
+	static void BP_NotifyChangeTargetActor(APawn* Pawn, ALRInteractiveActor* OldTargetActor, ALRInteractiveActor* NewTargetActor);
+
+	UPROPERTY(BlueprintAssignable)
+	FOnTargetActorChanged OnTargetActorChanged;
 	
 };
 

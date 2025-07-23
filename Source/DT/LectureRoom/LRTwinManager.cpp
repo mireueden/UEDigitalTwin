@@ -1,17 +1,21 @@
 #include "DT/LectureRoom/LRTwinManager.h"
 #include "DT/LectureRoom/Components/LRInteractComponentBase.h"
+#include "LectureRoom/Player/LRPawn.h"
+#include "LectureRoom/LRInteractiveActor.h"
+#include "LectureRoom/Interface/LRActorInterface.h"
+#include "Kismet/GameplayStatics.h"
 
 TMap<UWorld*, ALRTwinManager*> ALRTwinManager::WorldTwinManagerMap = TMap<UWorld*, ALRTwinManager*>();
 
 ALRTwinManager* ALRTwinManager::GetWorldTwinManager(UObject* WorldContextObject, bool bCreate)
 {
 	UWorld* World = WorldContextObject->GetWorld();
-	if(World == nullptr)
+	if (World == nullptr)
 	{
 		ensureMsgf(false, TEXT("Invalid World (WorldContext : %s)"), *(WorldContextObject->GetName()));
 		return nullptr;
 	}
-	
+
 	bool bInitializedWorld = World->IsInitialized();
 	bool bCleanedUpWorld = World->IsCleanedUp();
 
@@ -23,7 +27,7 @@ ALRTwinManager* ALRTwinManager::GetWorldTwinManager(UObject* WorldContextObject,
 		ensureMsgf(!bCleanedUpWorld, TEXT("World is CleanedUp."));
 		return nullptr;
 	}
-	
+
 	// 이미 월드에 등록되어 있음
 	if (WorldTwinManagerMap.Contains(World))
 	{
@@ -66,12 +70,25 @@ void ALRTwinManager::AddInteractComponent(ULRInteractComponentBase* Comp)
 		return;
 	}
 
-	InteractComponentList.Add(Comp);
+	int32 AddCount = InteractComponentList.Add(Comp);
+
+	if (AddCount > 0)
+	{
+		OnInteractComponentAdded.Broadcast(Comp);
+	
+		OnInteractComponentListChanged.Broadcast();
+	}
 }
 
 void ALRTwinManager::RemoveInteractComponent(ULRInteractComponentBase* Comp)
 {
-	InteractComponentList.Remove(Comp);
+	int32 RemoveCount = InteractComponentList.Remove(Comp);
+
+	if (RemoveCount)
+	{
+		OnInteractComponentRemoved.Broadcast(Comp);
+		OnInteractComponentListChanged.Broadcast();
+	}
 }
 
 bool ALRTwinManager::HasInteractComponent(ULRInteractComponentBase* Comp) const
@@ -82,4 +99,31 @@ bool ALRTwinManager::HasInteractComponent(ULRInteractComponentBase* Comp) const
 	}
 
 	return InteractComponentList.Contains(Comp);
+}
+
+ALRInteractiveActor* ALRTwinManager::GetCurrentTargetActor()
+{
+	ALRPawn* LRPawn = Cast<ALRPawn>(UGameplayStatics::GetPlayerPawn(this, 0));
+	return LRPawn ? Cast<ALRInteractiveActor>(LRPawn->GetTargetActor()) : nullptr;
+}
+
+void ALRTwinManager::NotifyChangeTargetActor(APawn* Pawn, ALRInteractiveActor* OldTargetActor, ALRInteractiveActor* NewTargetActor)
+{
+	if (OldTargetActor && OldTargetActor->Implements<ULRActorInterface>())
+	{
+		ILRActorInterface::Execute_EndFocus(OldTargetActor);
+	}
+	if (NewTargetActor && NewTargetActor->Implements<ULRActorInterface>())
+	{
+		ILRActorInterface::Execute_BeginFocus(NewTargetActor);
+	}
+	OnTargetActorChanged.Broadcast(Pawn, OldTargetActor, NewTargetActor);
+}
+
+void ALRTwinManager::BP_NotifyChangeTargetActor(APawn* Pawn, ALRInteractiveActor* OldTargetActor, ALRInteractiveActor* NewTargetActor)
+{
+	if (ALRTwinManager* TwinManager = GetWorldTwinManager(Pawn))
+	{
+		TwinManager->NotifyChangeTargetActor(Pawn, OldTargetActor, NewTargetActor);
+	}
 }

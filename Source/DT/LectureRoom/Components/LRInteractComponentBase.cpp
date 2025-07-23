@@ -5,6 +5,7 @@
 #include "LectureRoom/Interface/LRActorInterface.h"
 #include "LectureRoom/LRTypes.h"
 #include "LectureRoom/LRTwinManager.h"
+#include "LectureRoom/Data/LRTwinDataAsset.h"
 
 DEFINE_LOG_CATEGORY(LogLRInteractComponent);
 
@@ -71,11 +72,11 @@ void ULRInteractComponentBase::TurnOn()
 {
 	if (IsWorking())
 	{
-		UE_LOG(LogLRInteractComponent, Warning, TEXT("Already Working...(%s)[%s]"), *GetNameSafe(this), *GetObjectTypeString(Type));
+		UE_LOG(LogLRInteractComponent, Warning, TEXT("Already Working...(%s)[%s]"), *GetNameSafe(this), *GetObjectTypeString(GetObjectType()));
 		return;
 	}
 
-	UE_LOG(LogLRInteractComponent, Log, TEXT("TurnOn (%s)[%s]"), *GetNameSafe(this), *GetObjectTypeString(Type));
+	UE_LOG(LogLRInteractComponent, Log, TEXT("TurnOn (%s)[%s]"), *GetNameSafe(this), *GetObjectTypeString(GetObjectType()));
 	// 내부동작은 GetClass()->ImplementsInteface<T>
 	if (GetOwner() && GetOwner()->Implements<ULRActorInterface>())
 	{
@@ -89,10 +90,10 @@ void ULRInteractComponentBase::TurnOff()
 {
 	if (!IsWorking())
 	{
-		UE_LOG(LogLRInteractComponent, Warning, TEXT("Already Stopped...(%s)[%s]"), *GetNameSafe(this), *GetObjectTypeString(Type));
+		UE_LOG(LogLRInteractComponent, Warning, TEXT("Already Stopped...(%s)[%s]"), *GetNameSafe(this), *GetObjectTypeString(GetObjectType()));
 		return;
 	}
-	UE_LOG(LogLRInteractComponent, Log, TEXT("TurnOff (%s)[%s]"), *GetNameSafe(this), *GetObjectTypeString(Type));
+	UE_LOG(LogLRInteractComponent, Log, TEXT("TurnOff (%s)[%s]"), *GetNameSafe(this), *GetObjectTypeString(GetObjectType()));
 	// Class 정보에서 인터페이스 구현이 되었는지 확인
 	if (GetOwner() && GetOwner()->GetClass()->ImplementsInterface(ULRActorInterface::StaticClass()))
 	{
@@ -128,4 +129,13 @@ void ULRInteractComponentBase::EndFocus_Implementation()
 FString ULRInteractComponentBase::GetComponentInfo_Implementation()
 {
 	return FString::Printf(TEXT("%s"), *GetNameSafe(this));
+}
+
+ELRObjectType ULRInteractComponentBase::GetObjectType() const
+{
+	if (TwinDataAsset)
+	{
+		return TwinDataAsset->Type;
+	}
+	return ELRObjectType::None;
 }

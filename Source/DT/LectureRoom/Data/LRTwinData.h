@@ -9,31 +9,43 @@
 class ULRTwinDataFragment;
 class UTexture2D;
 enum class ELRObjectType : uint8;
+enum class ELRValueType : uint8;
+class ULRTwinDataAsset;
 
 /**
- * Twin 오브젝트의 공통 데이터를 담는 객체로 사용
+ * Twin 오브젝트의 런타임 데이터를 관리
  */
-UCLASS(Blueprintable, BlueprintType)
+UCLASS(BlueprintType)
 class DT_API ULRTwinData : public UObject
 {
 	GENERATED_BODY()
 	
 	// 기본 데이터
 public:
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+	UPROPERTY(VisibleInstanceOnly, BlueprintReadWrite)
 	FGuid Id;
 	
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
-	ELRObjectType Type;
+	UPROPERTY(VisibleInstanceOnly, BlueprintReadWrite)
+	TMap<ELRValueType, float> ValueMap;
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
-	FText DisplayName;
+	UPROPERTY(VisibleInstanceOnly, BlueprintReadWrite)
+	ULRTwinDataAsset* SettingDataAsset;
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
-	UTexture2D* Icon;
-
-	// 추가정보를 담을 데이터 목록
 public:
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
-	TArray<ULRTwinDataFragment*> TwinDataFragments;
+	UFUNCTION(BlueprintCallable)
+	bool SetId(FGuid NewID);
+
+	UFUNCTION(BlueprintCallable)
+	void InitTwinData(ULRTwinDataAsset* DataAsset);
+
+	// DataAsset에서 값을 가져오는 변수
+	UFUNCTION(BlueprintPure)
+	bool GetSettingValue(ELRValueType ValueType, float& OutValue);
+
+	UFUNCTION(BlueprintPure)
+	bool GetCurrentValue(ELRValueType ValueType, float& OutValue);
+
+	UFUNCTION(BlueprintCallable)
+	void SetCurrentValue(ELRValueType ValueType, float Value);
+
 };
