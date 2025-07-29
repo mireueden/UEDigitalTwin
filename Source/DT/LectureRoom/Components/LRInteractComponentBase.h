@@ -67,4 +67,9 @@ public:
 
 	UPROPERTY(VisibleInstanceOnly, BlueprintReadWrite)
 	ULRTwinData* TwinData;
+
+public:
+	UFUNCTION(BlueprintNativeEvent, BlueprintPure)
+	void GetID(FGuid& ID);
+	virtual void GetID_Implementation(FGuid& ID) { }
 };

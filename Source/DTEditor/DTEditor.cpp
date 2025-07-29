@@ -1,7 +1,7 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
-#include "CoreMinimal.h"
 #include "DTEditor/DTEditor.h"
+#include "CoreMinimal.h"
 
 IMPLEMENT_MODULE( FDTEditorModule, DTEditor);
  
