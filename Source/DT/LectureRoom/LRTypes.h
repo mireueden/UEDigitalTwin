@@ -20,6 +20,15 @@ enum class ELRObjectType : uint8
 };
 
 UENUM(BlueprintType)
+enum class ELRInteractionType : uint8
+{
+	None,
+	GameOnly, 
+	GameAndUI,
+	UIOnly,
+};
+
+UENUM(BlueprintType)
 enum class ELRValueType : uint8
 {
 	// 전력 소모량 (최대, 현재)

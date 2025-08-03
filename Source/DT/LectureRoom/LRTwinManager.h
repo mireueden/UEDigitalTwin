@@ -7,6 +7,7 @@
 class ULRInteractComponentBase;
 class ALRInteractiveActor;
 class APawn;
+enum class ELRInteractionType : uint8;
 
 // AddTwinComponent, RemoveComponent
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnInteractComponentAdded, ULRInteractComponentBase*, Component);
@@ -14,6 +15,22 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnInteractComponentRemoved, ULRInte
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnInteractComponentListChanged);
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FOnTargetActorChanged, APawn*, Pawn, ALRInteractiveActor*, OldActor, ALRInteractiveActor*, NewActor);
+
+USTRUCT(BlueprintType)
+struct FTwinComponentInfo
+{
+	GENERATED_BODY()
+
+public:
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	TArray<int32> ComponentIndeices;
+
+public:
+	FTwinComponentInfo()
+		: ComponentIndeices()
+	{
+	}
+};
 
 UCLASS(BlueprintType, Blueprintable)
 class ALRTwinManager : public AActor
@@ -33,6 +50,10 @@ public:
 	UPROPERTY(BlueprintReadOnly, VisibleInstanceOnly, transient, Category = "LRTwinManager")
 	TArray<ULRInteractComponentBase*> InteractComponentList;
 
+	UPROPERTY(BlueprintReadOnly, VisibleInstanceOnly)
+	TMap<ELRInteractionType, FTwinComponentInfo> InteractComponentIndexMap;
+	
+
 	// TODO :int32 반환값을 사용해서 추가된 항목 수 또는 제거된 항목수를 표현할 수 도 있음
 public:
 	// LRObjectComponent 레퍼런스 등록
@@ -45,6 +66,9 @@ public:
 
 	UFUNCTION(BlueprintPure)
 	bool HasInteractComponent(ULRInteractComponentBase* Comp) const;
+
+	UFUNCTION(BlueprintCallable)
+	void GetInteractComponentByInteractionType(ELRInteractionType Type, TArray<ULRInteractComponentBase*>& OutList);
 
 	UPROPERTY(BlueprintAssignable)
 	FOnInteractComponentAdded OnInteractComponentAdded;

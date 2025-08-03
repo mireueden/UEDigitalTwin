@@ -3,6 +3,8 @@
 #include "LectureRoom/Player/LRPawn.h"
 #include "LectureRoom/LRInteractiveActor.h"
 #include "LectureRoom/Interface/LRActorInterface.h"
+#include "LectureRoom/LRLibrary.h"
+#include "LectureRoom/LRTypes.h"
 #include "Kismet/GameplayStatics.h"
 
 TMap<UWorld*, ALRTwinManager*> ALRTwinManager::WorldTwinManagerMap = TMap<UWorld*, ALRTwinManager*>();
@@ -70,9 +72,12 @@ void ALRTwinManager::AddInteractComponent(ULRInteractComponentBase* Comp)
 		return;
 	}
 
-	int32 AddCount = InteractComponentList.Add(Comp);
+	int32 Index = InteractComponentList.Add(Comp);
+	ELRInteractionType Type = ULRLibrary::GetInteractionType(Comp);
+	FTwinComponentInfo& Info = InteractComponentIndexMap.FindOrAdd(Type);
+	Info.ComponentIndeices.Add(Index);
 
-	if (AddCount > 0)
+	if (Index != INDEX_NONE)
 	{
 		OnInteractComponentAdded.Broadcast(Comp);
 	
@@ -82,10 +87,18 @@ void ALRTwinManager::AddInteractComponent(ULRInteractComponentBase* Comp)
 
 void ALRTwinManager::RemoveInteractComponent(ULRInteractComponentBase* Comp)
 {
-	int32 RemoveCount = InteractComponentList.Remove(Comp);
+	int32 Index = InteractComponentList.Find(Comp);
 
-	if (RemoveCount)
+	if (Index != INDEX_NONE)
 	{
+		ELRInteractionType Type = ULRLibrary::GetInteractionType(Comp);
+
+		InteractComponentList.RemoveAt(Index);
+		if (FTwinComponentInfo* Info = InteractComponentIndexMap.Find(Type))
+		{
+			Info->ComponentIndeices.Remove(Index);
+		}
+
 		OnInteractComponentRemoved.Broadcast(Comp);
 		OnInteractComponentListChanged.Broadcast();
 	}
@@ -100,6 +113,26 @@ bool ALRTwinManager::HasInteractComponent(ULRInteractComponentBase* Comp) const
 
 	return InteractComponentList.Contains(Comp);
 }
+
+void ALRTwinManager::GetInteractComponentByInteractionType(ELRInteractionType Type, TArray<ULRInteractComponentBase*>& OutList)
+{
+	OutList.Empty();
+
+	FTwinComponentInfo* Info = InteractComponentIndexMap.Find(Type);
+	if (Info == nullptr)
+	{
+		return;
+	}
+	// Indecies 복수형으로 올바르게 이름 고치기
+	for (int32 Index : Info->ComponentIndeices)
+	{
+		if (InteractComponentList.IsValidIndex(Index))
+		{
+			OutList.Add(InteractComponentList[Index]);
+		}
+	}	
+}
+
 
 ALRInteractiveActor* ALRTwinManager::GetCurrentTargetActor()
 {

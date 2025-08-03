@@ -10,6 +10,7 @@ class ULRTwinDataFragment;
 class UTexture2D;
 enum class ELRObjectType : uint8;
 enum class ELRValueType : uint8;
+enum class ELRInteractionType : uint8;
 
 /**
  * 
@@ -30,5 +31,8 @@ public:
 	UTexture2D* Icon;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
-	TMap<ELRValueType, float> DefaultValueMap;	
+	TMap<ELRValueType, float> DefaultValueMap;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+	ELRInteractionType InteractionType;
 };
