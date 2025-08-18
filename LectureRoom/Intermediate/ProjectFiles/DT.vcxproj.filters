@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\DT.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\DT.target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\DTEditor.target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.editorconfig" />
+    <None Include="..\..\.gitignore" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\DTEditor">
+      <UniqueIdentifier>{0DD95664-E095-3CC9-A5E6-3A8BD4E9EE31}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\DTEditor\DTEditor.build.cs">
+      <Filter>Source\DTEditor</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\DTEditor\DTEditor.cpp">
+      <Filter>Source\DTEditor</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DTEditor\DTEditor.h">
+      <Filter>Source\DTEditor</Filter>
+    </ClInclude>
+    <Filter Include="Source\DT">
+      <UniqueIdentifier>{3F5E7004-446A-392B-8AA3-DE621406E54A}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\DT\DT.build.cs">
+      <Filter>Source\DT</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\DT\DT.cpp">
+      <Filter>Source\DT</Filter>
+    </ClCompile>
+    <Filter Include="Source\DT\Example">
+      <UniqueIdentifier>{FDC818D9-00B0-3970-87D1-5EE25B60B440}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT\Example\ActorCycleChecker.cpp">
+      <Filter>Source\DT\Example</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\Example\ActorCycleChecker.h">
+      <Filter>Source\DT\Example</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\DT\Example\MyActor.cpp">
+      <Filter>Source\DT\Example</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\Example\MyActor.h">
+      <Filter>Source\DT\Example</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\DT\Example\MyBall.cpp">
+      <Filter>Source\DT\Example</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\Example\MyBall.h">
+      <Filter>Source\DT\Example</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\DT\Example\MyObject.cpp">
+      <Filter>Source\DT\Example</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\Example\MyObject.h">
+      <Filter>Source\DT\Example</Filter>
+    </ClInclude>
+    <Filter Include="Source\DT\LectureRoom">
+      <UniqueIdentifier>{DEF87097-4D05-3B41-ADC1-5674CA41F9F2}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT\LectureRoom\LRInteractiveActor.cpp">
+      <Filter>Source\DT\LectureRoom</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\LectureRoom\LRInteractiveActor.h">
+      <Filter>Source\DT\LectureRoom</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\DT\LectureRoom\LRLibrary.cpp">
+      <Filter>Source\DT\LectureRoom</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\LectureRoom\LRLibrary.h">
+      <Filter>Source\DT\LectureRoom</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\DT\LectureRoom\LRTwinManager.cpp">
+      <Filter>Source\DT\LectureRoom</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\LectureRoom\LRTwinManager.h">
+      <Filter>Source\DT\LectureRoom</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\DT\LectureRoom\LRTypes.cpp">
+      <Filter>Source\DT\LectureRoom</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\LectureRoom\LRTypes.h">
+      <Filter>Source\DT\LectureRoom</Filter>
+    </ClInclude>
+    <Filter Include="Source\DT\LectureRoom\AsyncAction">
+      <UniqueIdentifier>{BBA4A959-4436-3B6E-AFAC-CE81BBFC6CF7}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT\LectureRoom\AsyncAction\LRAsyncAction_WaitTargetChanged.cpp">
+      <Filter>Source\DT\LectureRoom\AsyncAction</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\LectureRoom\AsyncAction\LRAsyncAction_WaitTargetChanged.h">
+      <Filter>Source\DT\LectureRoom\AsyncAction</Filter>
+    </ClInclude>
+    <Filter Include="Source\DT\LectureRoom\Components">
+      <UniqueIdentifier>{55D31695-DB4B-358B-9269-49B117D3162B}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT\LectureRoom\Components\LRInteractComponentBase.cpp">
+      <Filter>Source\DT\LectureRoom\Components</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\LectureRoom\Components\LRInteractComponentBase.h">
+      <Filter>Source\DT\LectureRoom\Components</Filter>
+    </ClInclude>
+    <Filter Include="Source\DT\LectureRoom\Data">
+      <UniqueIdentifier>{5ACFA9D3-4710-3DEB-B352-EB90D6D4C121}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT\LectureRoom\Data\LRTwinData.cpp">
+      <Filter>Source\DT\LectureRoom\Data</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\LectureRoom\Data\LRTwinData.h">
+      <Filter>Source\DT\LectureRoom\Data</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\DT\LectureRoom\Data\LRTwinDataAsset.cpp">
+      <Filter>Source\DT\LectureRoom\Data</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\LectureRoom\Data\LRTwinDataAsset.h">
+      <Filter>Source\DT\LectureRoom\Data</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\DT\LectureRoom\Data\LRTwinDataFragment.cpp">
+      <Filter>Source\DT\LectureRoom\Data</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\LectureRoom\Data\LRTwinDataFragment.h">
+      <Filter>Source\DT\LectureRoom\Data</Filter>
+    </ClInclude>
+    <Filter Include="Source\DT\LectureRoom\GameMode">
+      <UniqueIdentifier>{93E0F671-95F0-3792-9A70-6CBE27502CEE}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT\LectureRoom\GameMode\LRGameInstance.cpp">
+      <Filter>Source\DT\LectureRoom\GameMode</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\LectureRoom\GameMode\LRGameInstance.h">
+      <Filter>Source\DT\LectureRoom\GameMode</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\DT\LectureRoom\GameMode\LRGameMode.cpp">
+      <Filter>Source\DT\LectureRoom\GameMode</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\LectureRoom\GameMode\LRGameMode.h">
+      <Filter>Source\DT\LectureRoom\GameMode</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\DT\LectureRoom\GameMode\LRPlayerController.cpp">
+      <Filter>Source\DT\LectureRoom\GameMode</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\LectureRoom\GameMode\LRPlayerController.h">
+      <Filter>Source\DT\LectureRoom\GameMode</Filter>
+    </ClInclude>
+    <Filter Include="Source\DT\LectureRoom\Interface">
+      <UniqueIdentifier>{2E0232ED-CBC2-3C8A-9D0D-9F1BA4578430}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT\LectureRoom\Interface\LRActorInterface.cpp">
+      <Filter>Source\DT\LectureRoom\Interface</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\LectureRoom\Interface\LRActorInterface.h">
+      <Filter>Source\DT\LectureRoom\Interface</Filter>
+    </ClInclude>
+    <Filter Include="Source\DT\LectureRoom\Player">
+      <UniqueIdentifier>{1DEF1C6F-D300-3F89-9DA7-53D9B2280ACB}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT\LectureRoom\Player\LRPawn.cpp">
+      <Filter>Source\DT\LectureRoom\Player</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\LectureRoom\Player\LRPawn.h">
+      <Filter>Source\DT\LectureRoom\Player</Filter>
+    </ClInclude>
+    <Filter Include="Source\DT\LectureRoom\Subsystem">
+      <UniqueIdentifier>{583A92EF-0A86-3402-9E2E-18B6CFE2440D}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT\LectureRoom\Subsystem\LRWorldSubsystem.cpp">
+      <Filter>Source\DT\LectureRoom\Subsystem</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\LectureRoom\Subsystem\LRWorldSubsystem.h">
+      <Filter>Source\DT\LectureRoom\Subsystem</Filter>
+    </ClInclude>
+    <Filter Include="Source\DT\LectureRoom\Volume">
+      <UniqueIdentifier>{A2D59CA6-1B07-31C4-999C-EDB2E9198426}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT\LectureRoom\Volume\LRLightVolume.cpp">
+      <Filter>Source\DT\LectureRoom\Volume</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\LectureRoom\Volume\LRLightVolume.h">
+      <Filter>Source\DT\LectureRoom\Volume</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
