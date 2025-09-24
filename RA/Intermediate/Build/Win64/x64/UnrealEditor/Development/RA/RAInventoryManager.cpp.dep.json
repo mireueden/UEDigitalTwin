@@ -1,0 +1,30 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\workspace\\uedigitaltwin\\uedigitaltwin\\ra\\source\\ra\\manager\\rainventorymanager.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\workspace\\uedigitaltwin\\uedigitaltwin\\ra\\intermediate\\build\\win64\\x64\\raeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\workspace\\uedigitaltwin\\uedigitaltwin\\ra\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\ra\\definitions.ra.h",
+            "d:\\workspace\\uedigitaltwin\\uedigitaltwin\\ra\\source\\ra\\manager\\rainventorymanager.h",
+            "d:\\workspace\\uedigitaltwin\\uedigitaltwin\\ra\\source\\ra\\manager\\ramanagerbase.h",
+            "d:\\workspace\\uedigitaltwin\\uedigitaltwin\\ra\\intermediate\\build\\win64\\unrealeditor\\inc\\ra\\uht\\ramanagerbase.generated.h",
+            "d:\\workspace\\uedigitaltwin\\uedigitaltwin\\ra\\source\\ra\\types\\radefine.h",
+            "d:\\epicgames\\ue_5.6\\engine\\source\\runtime\\coreuobject\\public\\uobject\\noexporttypes.h",
+            "d:\\epicgames\\ue_5.6\\engine\\source\\runtime\\coreuobject\\public\\uobject\\propertyaccessutil.h",
+            "d:\\epicgames\\ue_5.6\\engine\\source\\runtime\\coreuobject\\public\\serialization\\testundeclaredscriptstructobjectreferences.h",
+            "d:\\epicgames\\ue_5.6\\engine\\source\\runtime\\core\\public\\math\\unitconversion.h",
+            "d:\\epicgames\\ue_5.6\\engine\\source\\runtime\\core\\public\\math\\unitconversion.inl",
+            "d:\\epicgames\\ue_5.6\\engine\\source\\runtime\\core\\public\\internationalization\\polyglottextdata.h",
+            "d:\\workspace\\uedigitaltwin\\uedigitaltwin\\ra\\intermediate\\build\\win64\\unrealeditor\\inc\\ra\\uht\\radefine.generated.h",
+            "d:\\workspace\\uedigitaltwin\\uedigitaltwin\\ra\\intermediate\\build\\win64\\unrealeditor\\inc\\ra\\uht\\rainventorymanager.generated.h",
+            "d:\\workspace\\uedigitaltwin\\uedigitaltwin\\ra\\source\\ra\\components\\ramanagecomponent.h",
+            "d:\\workspace\\uedigitaltwin\\uedigitaltwin\\ra\\intermediate\\build\\win64\\unrealeditor\\inc\\ra\\uht\\ramanagecomponent.generated.h",
+            "d:\\epicgames\\ue_5.6\\engine\\source\\runtime\\engine\\public\\engineutils.h",
+            "d:\\epicgames\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetstringlibrary.h",
+            "d:\\epicgames\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\kismetstringlibrary.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

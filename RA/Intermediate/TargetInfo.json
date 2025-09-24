@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "RA",
+			"Path": "..\\Source\\RA.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "RAEditor",
+			"Path": "..\\Source\\RAEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

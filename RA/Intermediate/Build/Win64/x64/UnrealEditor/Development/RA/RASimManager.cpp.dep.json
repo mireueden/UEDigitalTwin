@@ -1,0 +1,17 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\workspace\\uedigitaltwin\\uedigitaltwin\\ra\\source\\ra\\manager\\rasimmanager.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\workspace\\uedigitaltwin\\uedigitaltwin\\ra\\intermediate\\build\\win64\\x64\\raeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\workspace\\uedigitaltwin\\uedigitaltwin\\ra\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\ra\\definitions.ra.h",
+            "d:\\workspace\\uedigitaltwin\\uedigitaltwin\\ra\\source\\ra\\manager\\rasimmanager.h",
+            "d:\\workspace\\uedigitaltwin\\uedigitaltwin\\ra\\source\\ra\\manager\\ramanagerbase.h",
+            "d:\\workspace\\uedigitaltwin\\uedigitaltwin\\ra\\intermediate\\build\\win64\\unrealeditor\\inc\\ra\\uht\\ramanagerbase.generated.h",
+            "d:\\workspace\\uedigitaltwin\\uedigitaltwin\\ra\\intermediate\\build\\win64\\unrealeditor\\inc\\ra\\uht\\rasimmanager.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

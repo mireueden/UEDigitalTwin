@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\RA.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\RA.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\RAEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.editorconfig" />
+    <None Include="..\..\.vsconfig" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGameplayTags.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\RA">
+      <UniqueIdentifier>{FC5335E9-1F40-3674-A885-C8BE4ED009D7}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\RA\RA.Build.cs">
+      <Filter>Source\RA</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\RA\RA.cpp">
+      <Filter>Source\RA</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\RA\RA.h">
+      <Filter>Source\RA</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\RA\RAGameMode.cpp">
+      <Filter>Source\RA</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\RA\RAGameMode.h">
+      <Filter>Source\RA</Filter>
+    </ClInclude>
+    <Filter Include="Source\RA\AbilitySystem">
+      <UniqueIdentifier>{BD356BEC-52E9-33C1-AE2C-782AFF72E360}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\RA\AbilitySystem\GameplayAbilitySystemComponent.cpp">
+      <Filter>Source\RA\AbilitySystem</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\RA\AbilitySystem\GameplayAbilitySystemComponent.h">
+      <Filter>Source\RA\AbilitySystem</Filter>
+    </ClInclude>
+    <Filter Include="Source\RA\Components">
+      <UniqueIdentifier>{FFBFD56A-528D-37C8-889A-BE82B125BC24}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\RA\Components\RAManageComponent.cpp">
+      <Filter>Source\RA\Components</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\RA\Components\RAManageComponent.h">
+      <Filter>Source\RA\Components</Filter>
+    </ClInclude>
+    <Filter Include="Source\RA\Library">
+      <UniqueIdentifier>{2BC11BAA-B52B-3D75-9159-13CAACC00B1B}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\RA\Library\RAAnimationLibrary.cpp">
+      <Filter>Source\RA\Library</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\RA\Library\RAAnimationLibrary.h">
+      <Filter>Source\RA\Library</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\RA\Library\RALibrary.cpp">
+      <Filter>Source\RA\Library</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\RA\Library\RALibrary.h">
+      <Filter>Source\RA\Library</Filter>
+    </ClInclude>
+    <Filter Include="Source\RA\Manager">
+      <UniqueIdentifier>{6BBFC8A3-DB00-362F-B534-D51C21E9791D}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\RA\Manager\RAInventoryManager.cpp">
+      <Filter>Source\RA\Manager</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\RA\Manager\RAInventoryManager.h">
+      <Filter>Source\RA\Manager</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\RA\Manager\RAManagerBase.cpp">
+      <Filter>Source\RA\Manager</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\RA\Manager\RAManagerBase.h">
+      <Filter>Source\RA\Manager</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\RA\Manager\RARobotManager.cpp">
+      <Filter>Source\RA\Manager</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\RA\Manager\RARobotManager.h">
+      <Filter>Source\RA\Manager</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\RA\Manager\RASimManager.cpp">
+      <Filter>Source\RA\Manager</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\RA\Manager\RASimManager.h">
+      <Filter>Source\RA\Manager</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\RA\Manager\RAUIManager.cpp">
+      <Filter>Source\RA\Manager</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\RA\Manager\RAUIManager.h">
+      <Filter>Source\RA\Manager</Filter>
+    </ClInclude>
+    <Filter Include="Source\RA\Types">
+      <UniqueIdentifier>{A76D1BEB-EA76-3AF3-B1EB-B7991BA9A01E}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\RA\Types\RADefine.cpp">
+      <Filter>Source\RA\Types</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\RA\Types\RADefine.h">
+      <Filter>Source\RA\Types</Filter>
+    </ClInclude>
+    <Filter Include="Source\RA\Widget">
+      <UniqueIdentifier>{AC7A1CA3-86C5-37F1-9BFA-74F387A65494}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\RA\Widget\RAInputableWidget.cpp">
+      <Filter>Source\RA\Widget</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\RA\Widget\RAInputableWidget.h">
+      <Filter>Source\RA\Widget</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\RA\Widget\RAUserWidget.cpp">
+      <Filter>Source\RA\Widget</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\RA\Widget\RAUserWidget.h">
+      <Filter>Source\RA\Widget</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

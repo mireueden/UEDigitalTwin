@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"D:\\workspace\\UEDigitalTwin\\UEDigitalTwin\\RA\\Source\\RA\\RA.Build.cs",
+		"D:\\workspace\\UEDigitalTwin\\UEDigitalTwin\\RA\\Source\\RA.Target.cs",
+		"D:\\workspace\\UEDigitalTwin\\UEDigitalTwin\\RA\\Source\\RAEditor.Target.cs"
+	],
+	"EngineVersion": "5.6.1"
+}

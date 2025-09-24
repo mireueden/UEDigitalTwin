@@ -1,0 +1,21 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.RA.gen.cpp.obj": [
+			"GameplayAbilitySystemComponent.gen.cpp.obj",
+			"RA.init.gen.cpp.obj",
+			"RAAnimationLibrary.gen.cpp.obj",
+			"RADefine.gen.cpp.obj",
+			"RAGameMode.gen.cpp.obj",
+			"RAInputableWidget.gen.cpp.obj",
+			"RAInventoryManager.gen.cpp.obj",
+			"RALibrary.gen.cpp.obj",
+			"RAManageComponent.gen.cpp.obj",
+			"RAManagerBase.gen.cpp.obj",
+			"RARobotManager.gen.cpp.obj",
+			"RASimManager.gen.cpp.obj",
+			"RAUIManager.gen.cpp.obj",
+			"RAUserWidget.gen.cpp.obj"
+		]
+	}
+}
