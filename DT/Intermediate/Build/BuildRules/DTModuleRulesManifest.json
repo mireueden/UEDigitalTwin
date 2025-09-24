@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"D:\\workspace\\UEDigitalTwin\\UEDigitalTwin\\DT\\Source\\DT\\DT.Build.cs",
+		"D:\\workspace\\UEDigitalTwin\\UEDigitalTwin\\DT\\Source\\DT.Target.cs",
+		"D:\\workspace\\UEDigitalTwin\\UEDigitalTwin\\DT\\Source\\DTEditor.Target.cs"
+	],
+	"EngineVersion": "5.6.1"
+}
