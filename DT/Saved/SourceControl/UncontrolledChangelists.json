@@ -1,0 +1,13 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"D:/workspace/UEDigitalTwin/UEDigitalTwin/DT/Content/Simulation/PCG/PCG_Factory.uasset",
+				"D:/workspace/UEDigitalTwin/UEDigitalTwin/DT/Content/Map/LV_DigitalTwin.umap"
+			]
+		}
+	]
+}

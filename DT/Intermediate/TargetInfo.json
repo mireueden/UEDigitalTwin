@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "DT",
+			"Path": "..\\Source\\DT.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "DTEditor",
+			"Path": "..\\Source\\DTEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

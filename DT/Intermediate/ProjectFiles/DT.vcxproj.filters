@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\DT.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\DT.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\DTEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGameplayTags.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\DT">
+      <UniqueIdentifier>{3F5E7004-446A-392B-8AA3-DE621406E54A}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\DT\DT.Build.cs">
+      <Filter>Source\DT</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\DT\DT.cpp">
+      <Filter>Source\DT</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\DT.h">
+      <Filter>Source\DT</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\DT\DTActor.cpp">
+      <Filter>Source\DT</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\DTActor.h">
+      <Filter>Source\DT</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\DT\DTPawnBase.cpp">
+      <Filter>Source\DT</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\DTPawnBase.h">
+      <Filter>Source\DT</Filter>
+    </ClInclude>
+    <Filter Include="Source\DT\AbilitySystem">
+      <UniqueIdentifier>{DF853E88-4948-3C3F-BD6B-8852BCC57E29}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT\AbilitySystem\DTAbilitySystemComponent.cpp">
+      <Filter>Source\DT\AbilitySystem</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\AbilitySystem\DTAbilitySystemComponent.h">
+      <Filter>Source\DT\AbilitySystem</Filter>
+    </ClInclude>
+    <Filter Include="Source\DT\AbilitySystem\AbilityTask">
+      <UniqueIdentifier>{39817B21-A323-3FE5-B83A-339C9899C81E}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT\AbilitySystem\AbilityTask\DTAT_LoadManagerComplete.cpp">
+      <Filter>Source\DT\AbilitySystem\AbilityTask</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\AbilitySystem\AbilityTask\DTAT_LoadManagerComplete.h">
+      <Filter>Source\DT\AbilitySystem\AbilityTask</Filter>
+    </ClInclude>
+    <Filter Include="Source\DT\AbilitySystem\GameplayAbility">
+      <UniqueIdentifier>{356BB24F-0893-3EAE-90F2-84B16D968831}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT\AbilitySystem\GameplayAbility\DTGameplayAbility.cpp">
+      <Filter>Source\DT\AbilitySystem\GameplayAbility</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\AbilitySystem\GameplayAbility\DTGameplayAbility.h">
+      <Filter>Source\DT\AbilitySystem\GameplayAbility</Filter>
+    </ClInclude>
+    <Filter Include="Source\DT\Actor">
+      <UniqueIdentifier>{1404DEE4-1FF6-36DE-A70C-BE7ECB13EE5E}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT\Actor\DTTargetPoint.cpp">
+      <Filter>Source\DT\Actor</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\Actor\DTTargetPoint.h">
+      <Filter>Source\DT\Actor</Filter>
+    </ClInclude>
+    <Filter Include="Source\DT\AsyncAction">
+      <UniqueIdentifier>{E3F31A77-4268-383D-8F12-6D99BB9D3041}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT\AsyncAction\DTAA_LoadManagerComplete.cpp">
+      <Filter>Source\DT\AsyncAction</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\AsyncAction\DTAA_LoadManagerComplete.h">
+      <Filter>Source\DT\AsyncAction</Filter>
+    </ClInclude>
+    <Filter Include="Source\DT\DataAsset">
+      <UniqueIdentifier>{30E7DAF2-740F-3268-AE58-828DCFFC8243}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT\DataAsset\DTCellDataAsset.cpp">
+      <Filter>Source\DT\DataAsset</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\DataAsset\DTCellDataAsset.h">
+      <Filter>Source\DT\DataAsset</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\DT\DataAsset\DTSpecDataAsset.cpp">
+      <Filter>Source\DT\DataAsset</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\DataAsset\DTSpecDataAsset.h">
+      <Filter>Source\DT\DataAsset</Filter>
+    </ClInclude>
+    <Filter Include="Source\DT\GameMode">
+      <UniqueIdentifier>{3B31DC51-3A0B-3D27-A4F3-53B96ACD3C1B}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT\GameMode\DTGameMode.cpp">
+      <Filter>Source\DT\GameMode</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\GameMode\DTGameMode.h">
+      <Filter>Source\DT\GameMode</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\DT\GameMode\DTPlayerController.cpp">
+      <Filter>Source\DT\GameMode</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\GameMode\DTPlayerController.h">
+      <Filter>Source\DT\GameMode</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\DT\GameMode\DTPlayerPawn.cpp">
+      <Filter>Source\DT\GameMode</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\GameMode\DTPlayerPawn.h">
+      <Filter>Source\DT\GameMode</Filter>
+    </ClInclude>
+    <Filter Include="Source\DT\Interface">
+      <UniqueIdentifier>{310A497D-9C0E-3BA8-A5F2-9E946C7E9BF1}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT\Interface\DTTargetPointInterface.cpp">
+      <Filter>Source\DT\Interface</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\Interface\DTTargetPointInterface.h">
+      <Filter>Source\DT\Interface</Filter>
+    </ClInclude>
+    <Filter Include="Source\DT\Library">
+      <UniqueIdentifier>{46301B2F-EB59-374E-93FA-3EC2A799C39F}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT\Library\DTLibrary.cpp">
+      <Filter>Source\DT\Library</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\Library\DTLibrary.h">
+      <Filter>Source\DT\Library</Filter>
+    </ClInclude>
+    <Filter Include="Source\DT\Manager">
+      <UniqueIdentifier>{0EDCAD43-B0AF-3CB1-9158-A6C88B7302F3}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT\Manager\DTAssetManager.cpp">
+      <Filter>Source\DT\Manager</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\Manager\DTAssetManager.h">
+      <Filter>Source\DT\Manager</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\DT\Manager\DTFactoryManager.cpp">
+      <Filter>Source\DT\Manager</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\Manager\DTFactoryManager.h">
+      <Filter>Source\DT\Manager</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\DT\Manager\DTManagerBase.cpp">
+      <Filter>Source\DT\Manager</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\Manager\DTManagerBase.h">
+      <Filter>Source\DT\Manager</Filter>
+    </ClInclude>
+    <Filter Include="Source\DT\Types">
+      <UniqueIdentifier>{5E600165-8246-38BF-B0FA-C57D917C9411}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT\Types\DTCell.cpp">
+      <Filter>Source\DT\Types</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\Types\DTCell.h">
+      <Filter>Source\DT\Types</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\DT\Types\DTDefine.cpp">
+      <Filter>Source\DT\Types</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\Types\DTDefine.h">
+      <Filter>Source\DT\Types</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\DT\Types\DTGameplayTags.cpp">
+      <Filter>Source\DT\Types</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\Types\DTGameplayTags.h">
+      <Filter>Source\DT\Types</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\DT\Types\DTSpec.cpp">
+      <Filter>Source\DT\Types</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT\Types\DTSpec.h">
+      <Filter>Source\DT\Types</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

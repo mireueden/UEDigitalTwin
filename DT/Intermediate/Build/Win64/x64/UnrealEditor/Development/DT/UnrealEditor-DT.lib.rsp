@@ -1,0 +1,12 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-DT.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:/workspace/UEDigitalTwin/UEDigitalTwin/DT/Intermediate/Build/Win64/x64/DTEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.obj"
+"D:/workspace/UEDigitalTwin/UEDigitalTwin/DT/Intermediate/Build/Win64/x64/UnrealEditor/Development/DT/Module.DT.cpp.obj"
+"D:/workspace/UEDigitalTwin/UEDigitalTwin/DT/Intermediate/Build/Win64/x64/UnrealEditor/Development/DT/Default.rc2.res"
+/OUT:"D:/workspace/UEDigitalTwin/UEDigitalTwin/DT/Intermediate/Build/Win64/x64/UnrealEditor/Development/DT/UnrealEditor-DT.lib"
