@@ -1,9 +1,10 @@
 {
 	"SourceFiles": [
-		"D:\\workspace\\UEDigitalTwin\\UEDigitalTwin\\Source\\DTEditor\\DTEditor.build.cs",
-		"D:\\workspace\\UEDigitalTwin\\UEDigitalTwin\\Source\\DT\\DT.build.cs",
-		"D:\\workspace\\UEDigitalTwin\\UEDigitalTwin\\Source\\DT.target.cs",
-		"D:\\workspace\\UEDigitalTwin\\UEDigitalTwin\\Source\\DTEditor.target.cs"
+		"D:\\workspace\\UEDigitalTwin\\UEDigitalTwin\\LectureRoom\\Source\\DTEditor\\DTEditor.build.cs",
+		"D:\\workspace\\UEDigitalTwin\\UEDigitalTwin\\LectureRoom\\Source\\DT\\DT.build.cs",
+		"D:\\workspace\\UEDigitalTwin\\UEDigitalTwin\\LectureRoom\\Plugins\\NSDT\\Source\\NSDT\\NSDT.Build.cs",
+		"D:\\workspace\\UEDigitalTwin\\UEDigitalTwin\\LectureRoom\\Source\\DT.target.cs",
+		"D:\\workspace\\UEDigitalTwin\\UEDigitalTwin\\LectureRoom\\Source\\DTEditor.target.cs"
 	],
-	"EngineVersion": "5.6.0"
+	"EngineVersion": "5.6.1"
 }

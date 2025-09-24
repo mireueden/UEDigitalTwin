@@ -15,9 +15,14 @@ public class DT : ModuleRules
 			"InputCore",
 			"EnhancedInput",
 			"UMG",
-		});
+			"GameplayTags",
+			"GameplayTasks",
+            "GameplayAbilities"
+        });
 
-		PrivateDependencyModuleNames.AddRange(new string[] { });
+		PrivateDependencyModuleNames.AddRange(new string[] {
+			"NSDT"
+		});
 
 		PublicIncludePaths.AddRange(new string[] {
 			"DT"

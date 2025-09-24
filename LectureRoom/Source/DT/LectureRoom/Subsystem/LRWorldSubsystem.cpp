@@ -2,7 +2,7 @@
 
 
 #include "LectureRoom/Subsystem/LRWorldSubsystem.h"
-#include "LectureRoom/Player/LRPawn.h"
+#include "NSDT/LectureRoom/Player/LRPawn.h"
 #include "Kismet/GameplayStatics.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogLRWorldSubsystem, Log, All);

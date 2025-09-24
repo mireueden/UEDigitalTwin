@@ -2,8 +2,8 @@
 
 
 #include "LectureRoom/AsyncAction/LRAsyncAction_WaitTargetChanged.h"
-#include "LectureRoom/LRTwinManager.h"
-#include "LectureRoom/LRInteractiveActor.h"
+#include "NSDT/LectureRoom/LRTwinManager.h"
+#include "NSDT/LectureRoom/LRInteractiveActor.h"
 #include "GameFramework/Pawn.h"
 
 ULRAsyncAction_WaitTargetChanged* ULRAsyncAction_WaitTargetChanged::CreateWaitLRTargetChanged(UObject* WorldContextObject, bool bRetriggerable)

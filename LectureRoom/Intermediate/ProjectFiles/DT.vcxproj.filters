@@ -12,7 +12,6 @@
       <Filter>Source</Filter>
     </None>
     <None Include="..\..\.editorconfig" />
-    <None Include="..\..\.gitignore" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -27,6 +26,66 @@
     </None>
     <None Include="..\..\Config\DefaultInput.ini">
       <Filter>Config</Filter>
+    </None>
+    <Filter Include="Plugins">
+      <UniqueIdentifier>{BB38096A-B391-30DC-A0D4-4F3EA6B44507}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\NSDT">
+      <UniqueIdentifier>{68A89FA6-BD1A-3FD3-BF07-E24D256C87F3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\NSDT\Source">
+      <UniqueIdentifier>{06D23FBC-C182-3161-863C-8088FDD33A49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\NSDT\Source\NSDT">
+      <UniqueIdentifier>{B29A04E1-6A0B-3F3C-83B0-68FB39DE1EA9}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\NSDT\Source\NSDT\NSDT.Build.cs">
+      <Filter>Plugins\NSDT\Source\NSDT</Filter>
+    </None>
+    <Filter Include="Plugins\NSDT\Source\NSDT\Private">
+      <UniqueIdentifier>{C5534EA1-2AAC-3382-BD52-1E0C4030F368}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\NSDT\Source\NSDT\Private\NSDT.cpp">
+      <Filter>Plugins\NSDT\Source\NSDT\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\NSDT\Source\NSDT\Private\AbilitySystem">
+      <UniqueIdentifier>{0BD83FF1-B1CF-3DEE-9C3F-B7AFAADFEAB6}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\NSDT\Source\NSDT\Private\AbilitySystem\DTAbilitySystemComponent.cpp">
+      <Filter>Plugins\NSDT\Source\NSDT\Private\AbilitySystem</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\NSDT\Source\NSDT\Private\AbilitySystem\GameplayAbility">
+      <UniqueIdentifier>{D17169B7-E1C5-3695-AB4B-CA19267B7A68}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\NSDT\Source\NSDT\Private\AbilitySystem\GameplayAbility\DTGameplayAbility.cpp">
+      <Filter>Plugins\NSDT\Source\NSDT\Private\AbilitySystem\GameplayAbility</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\NSDT\Source\NSDT\Public">
+      <UniqueIdentifier>{C4680901-8C6F-3AAF-8F7F-105C9CE09FE3}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\NSDT\Source\NSDT\Public\NSDT.h">
+      <Filter>Plugins\NSDT\Source\NSDT\Public</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\NSDT\Source\NSDT\Public\AbilitySystem">
+      <UniqueIdentifier>{3B77E230-3581-364A-9736-058A5561DE51}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\NSDT\Source\NSDT\Public\AbilitySystem\DTAbilitySystemComponent.h">
+      <Filter>Plugins\NSDT\Source\NSDT\Public\AbilitySystem</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\NSDT\Source\NSDT\Public\AbilitySystem\GameplayAbility">
+      <UniqueIdentifier>{8C6E1B01-320B-3621-BBAE-BFB687AA8347}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\NSDT\Source\NSDT\Public\AbilitySystem\GameplayAbility\DTGameplayAbility.h">
+      <Filter>Plugins\NSDT\Source\NSDT\Public\AbilitySystem\GameplayAbility</Filter>
+    </ClInclude>
+    <None Include="..\..\Plugins\NSDT\NSDT.uplugin">
+      <Filter>Plugins\NSDT</Filter>
+    </None>
+    <Filter Include="Plugins\NSDT\Resources">
+      <UniqueIdentifier>{B4573A16-0618-3DDE-8120-AB0E3F6B3638}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\NSDT\Resources\Icon128.png">
+      <Filter>Plugins\NSDT\Resources</Filter>
     </None>
     <Filter Include="Source\DTEditor">
       <UniqueIdentifier>{0DD95664-E095-3CC9-A5E6-3A8BD4E9EE31}</UniqueIdentifier>
@@ -79,30 +138,6 @@
     <Filter Include="Source\DT\LectureRoom">
       <UniqueIdentifier>{DEF87097-4D05-3B41-ADC1-5674CA41F9F2}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\DT\LectureRoom\LRInteractiveActor.cpp">
-      <Filter>Source\DT\LectureRoom</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\DT\LectureRoom\LRInteractiveActor.h">
-      <Filter>Source\DT\LectureRoom</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\DT\LectureRoom\LRLibrary.cpp">
-      <Filter>Source\DT\LectureRoom</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\DT\LectureRoom\LRLibrary.h">
-      <Filter>Source\DT\LectureRoom</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\DT\LectureRoom\LRTwinManager.cpp">
-      <Filter>Source\DT\LectureRoom</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\DT\LectureRoom\LRTwinManager.h">
-      <Filter>Source\DT\LectureRoom</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\DT\LectureRoom\LRTypes.cpp">
-      <Filter>Source\DT\LectureRoom</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\DT\LectureRoom\LRTypes.h">
-      <Filter>Source\DT\LectureRoom</Filter>
-    </ClInclude>
     <Filter Include="Source\DT\LectureRoom\AsyncAction">
       <UniqueIdentifier>{BBA4A959-4436-3B6E-AFAC-CE81BBFC6CF7}</UniqueIdentifier>
     </Filter>
@@ -111,36 +146,6 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\DT\LectureRoom\AsyncAction\LRAsyncAction_WaitTargetChanged.h">
       <Filter>Source\DT\LectureRoom\AsyncAction</Filter>
-    </ClInclude>
-    <Filter Include="Source\DT\LectureRoom\Components">
-      <UniqueIdentifier>{55D31695-DB4B-358B-9269-49B117D3162B}</UniqueIdentifier>
-    </Filter>
-    <ClCompile Include="..\..\Source\DT\LectureRoom\Components\LRInteractComponentBase.cpp">
-      <Filter>Source\DT\LectureRoom\Components</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\DT\LectureRoom\Components\LRInteractComponentBase.h">
-      <Filter>Source\DT\LectureRoom\Components</Filter>
-    </ClInclude>
-    <Filter Include="Source\DT\LectureRoom\Data">
-      <UniqueIdentifier>{5ACFA9D3-4710-3DEB-B352-EB90D6D4C121}</UniqueIdentifier>
-    </Filter>
-    <ClCompile Include="..\..\Source\DT\LectureRoom\Data\LRTwinData.cpp">
-      <Filter>Source\DT\LectureRoom\Data</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\DT\LectureRoom\Data\LRTwinData.h">
-      <Filter>Source\DT\LectureRoom\Data</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\DT\LectureRoom\Data\LRTwinDataAsset.cpp">
-      <Filter>Source\DT\LectureRoom\Data</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\DT\LectureRoom\Data\LRTwinDataAsset.h">
-      <Filter>Source\DT\LectureRoom\Data</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\DT\LectureRoom\Data\LRTwinDataFragment.cpp">
-      <Filter>Source\DT\LectureRoom\Data</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\DT\LectureRoom\Data\LRTwinDataFragment.h">
-      <Filter>Source\DT\LectureRoom\Data</Filter>
     </ClInclude>
     <Filter Include="Source\DT\LectureRoom\GameMode">
       <UniqueIdentifier>{93E0F671-95F0-3792-9A70-6CBE27502CEE}</UniqueIdentifier>
@@ -162,24 +167,6 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\DT\LectureRoom\GameMode\LRPlayerController.h">
       <Filter>Source\DT\LectureRoom\GameMode</Filter>
-    </ClInclude>
-    <Filter Include="Source\DT\LectureRoom\Interface">
-      <UniqueIdentifier>{2E0232ED-CBC2-3C8A-9D0D-9F1BA4578430}</UniqueIdentifier>
-    </Filter>
-    <ClCompile Include="..\..\Source\DT\LectureRoom\Interface\LRActorInterface.cpp">
-      <Filter>Source\DT\LectureRoom\Interface</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\DT\LectureRoom\Interface\LRActorInterface.h">
-      <Filter>Source\DT\LectureRoom\Interface</Filter>
-    </ClInclude>
-    <Filter Include="Source\DT\LectureRoom\Player">
-      <UniqueIdentifier>{1DEF1C6F-D300-3F89-9DA7-53D9B2280ACB}</UniqueIdentifier>
-    </Filter>
-    <ClCompile Include="..\..\Source\DT\LectureRoom\Player\LRPawn.cpp">
-      <Filter>Source\DT\LectureRoom\Player</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\DT\LectureRoom\Player\LRPawn.h">
-      <Filter>Source\DT\LectureRoom\Player</Filter>
     </ClInclude>
     <Filter Include="Source\DT\LectureRoom\Subsystem">
       <UniqueIdentifier>{583A92EF-0A86-3402-9E2E-18B6CFE2440D}</UniqueIdentifier>
